@@ -75,4 +75,10 @@ jobs:
         with:
           app-name: 'amthuclangdaihoc'
           slot-name: 'Production'
-          
+      
+      - name: Run collectstatic
+        run: python manage.py collectstatic
+        
+      - name: 'Install Openai'
+        run: pip install openai
+        
